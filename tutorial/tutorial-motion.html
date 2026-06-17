@@ -8,16 +8,17 @@
   </head>
   <body>
     <header>
-      <h1>Arduino Fun Kits for Kids</h1>
-      <p>Learn electronics through play and creativity!</p>
+      <h1 data-i18n="headerTitle">Arduino Fun Kits for Kids</h1>
+      <p data-i18n="headerSubtitle">Learn electronics through play and creativity!</p>
     </header>
     <nav>
-      <a href="../index.html">🏠 Home</a>
-      <a href="#tutorials">Tutorial</a>
+      <a href="../index.html" data-i18n="home">🏠 Home</a>
+      <a href="#tutorials" data-i18n="tutorial">Tutorial</a>
+      <button class="lang-switcher" id="langToggle" data-lang="en">EN | ქა</button>
     </nav>
     <section id="tutorials">
-      <h2>👀 Motion Detector Tutorial</h2>
-      <p>
+      <h2 data-i18n="motionTutorialTitle">👀 Motion Detector Tutorial</h2>
+      <p data-i18n="motionTutorialSubtitle">
         Build a smart motion detector that lights up when movement is detected!
       </p>
 
@@ -28,8 +29,8 @@
 
       <!-- Steps with Images -->
       <div class="step active">
-        <h3>Step 1: Setup Your Workspace</h3>
-        <p>
+        <h3 data-i18n="mStep1Title">Step 1: Setup Your Workspace</h3>
+        <p data-i18n="mStep1Desc">
           Place your Arduino Uno and breadboard on a flat surface. Make sure you
           have all components ready.
         </p>
@@ -42,8 +43,8 @@
       </div>
 
       <div class="step">
-        <h3>Step 2: Insert PIR Motion Sensor</h3>
-        <p>
+        <h3 data-i18n="mStep2Title">Step 2: Insert PIR Motion Sensor</h3>
+        <p data-i18n="mStep2Desc">
           Carefully insert the PIR motion sensor module into the breadboard. The
           sensor has three pins: VCC, GND, and OUT.
         </p>
@@ -53,8 +54,8 @@
       </div>
 
       <div class="step">
-        <h3>Step 3: Connect Power Wires</h3>
-        <p>
+        <h3 data-i18n="mStep3Title">Step 3: Connect Power Wires</h3>
+        <p data-i18n="mStep3Desc">
           Connect the VCC pin to Arduino 5V and GND pin to Arduino GND using
           jumper wires.
         </p>
@@ -67,8 +68,8 @@
       </div>
 
       <div class="step">
-        <h3>Step 4: Connect Signal Wire</h3>
-        <p>
+        <h3 data-i18n="mStep4Title">Step 4: Connect Signal Wire</h3>
+        <p data-i18n="mStep4Desc">
           Connect the OUT pin of the PIR sensor to digital pin 2 on the Arduino
           using a jumper wire.
         </p>
@@ -78,8 +79,8 @@
       </div>
 
       <div class="step">
-        <h3>Step 5: Add LED Circuit</h3>
-        <p>
+        <h3 data-i18n="mStep5Title">Step 5: Add LED Circuit</h3>
+        <p data-i18n="mStep5Desc">
           Connect an LED and resistor to digital pin 13. Remember: LED long leg
           (anode) to resistor, short leg (cathode) to ground.
         </p>
@@ -89,8 +90,8 @@
       </div>
 
       <div class="step">
-        <h3>Step 6: Upload the Code</h3>
-        <p>
+        <h3 data-i18n="mStep6Title">Step 6: Upload the Code</h3>
+        <p data-i18n="mStep6Desc">
           Open Arduino IDE, copy the motion detection code, and upload it to
           your Arduino board.
         </p>
@@ -103,8 +104,8 @@
       </div>
 
       <div class="step">
-        <h3>Step 7: Test Your Motion Detector</h3>
-        <p>
+        <h3 data-i18n="mStep7Title">Step 7: Test Your Motion Detector</h3>
+        <p data-i18n="mStep7Desc">
           Power up your Arduino and wait 10-60 seconds for the PIR sensor to
           calibrate. Then wave your hand in front of it!
         </p>
@@ -114,8 +115,8 @@
       </div>
 
       <div class="step">
-        <h3>🎉 Congratulations!</h3>
-        <p>
+        <h3 data-i18n="mStepDoneTitle">🎉 Congratulations!</h3>
+        <p data-i18n="mStepDoneDesc">
           Your motion detector is working! The LED should light up whenever
           movement is detected. Try different distances and movements.
         </p>
@@ -126,11 +127,11 @@
           />
         </div>
         <!-- Homepage Button -->
-        <a href="../index.html" class="btn-home">🏠 Go to Homepage</a>
+        <a href="../index.html" class="btn-home" data-i18n="goToHomepage">🏠 Go to Homepage</a>
       </div>
 
       <!-- Navigation -->
-      <button id="nextBtn">Next Step ➡️</button>
+      <button id="nextBtn" data-i18n="nextStep">Next Step ➡️</button>
     </section>
 
     <script src="tutorial.js"></script>

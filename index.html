@@ -17,12 +17,13 @@
     <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-container">
-        <a href="#" class="logo">STEM Kits 🚀</a>
+        <a href="#" class="logo" data-i18n="logo">STEM Kits 🚀</a>
         <ul class="nav-links">
-          <li><a href="#kits">Kits</a></li>
-          <li><a href="#parents">Parents</a></li>
-          <li><a href="#downloads">Downloads</a></li>
-          <li><a href="#order" class="nav-cta">Order Now</a></li>
+          <li><a href="#kits" data-i18n="kits">Kits</a></li>
+          <li><a href="#parents" data-i18n="parents">Parents</a></li>
+          <li><a href="#downloads" data-i18n="downloads">Downloads</a></li>
+          <li><a href="#order" class="nav-cta" data-i18n="order">Order Now</a></li>
+          <li><button class="lang-switcher" id="langToggle" data-lang="en">EN | ქა</button></li>
         </ul>
       </div>
     </nav>
@@ -30,12 +31,12 @@
     <!-- Hero Section -->
     <header class="hero">
       <div class="hero-content">
-        <h1>Spark Creativity with Electronics!</h1>
-        <p>
+        <h1 data-i18n="heroTitle">Spark Creativity with Electronics!</h1>
+        <p data-i18n="heroSubtitle">
           Fun, safe, and educational Arduino kits for future inventors. No
           coding required to start!
         </p>
-        <a href="#kits" class="btn btn-primary">Explore Kits</a>
+        <a href="#kits" class="btn btn-primary" data-i18n="heroBtn">Explore Kits</a>
       </div>
       <div class="hero-image">
         <div id="arduino-container">
@@ -60,8 +61,8 @@
     <section id="kits" class="section">
       <div class="container">
         <div class="section-header">
-          <h2>Our Kits for Kids</h2>
-          <p>Everything needed to build, learn, and play.</p>
+          <h2 data-i18n="kitsTitle">Our Kits for Kids</h2>
+          <p data-i18n="kitsSubtitle">Everything needed to build, learn, and play.</p>
         </div>
 
         <!-- Sound & Light Kit -->
@@ -73,15 +74,15 @@
             />
           </div>
           <div class="kit-content">
-            <span class="badge">Bestseller</span>
-            <h3>🎤 Sound & Light Kit</h3>
-            <p>
+            <span class="badge" data-i18n="bestseller">Bestseller</span>
+            <h3 data-i18n="soundKitTitle">🎤 Sound & Light Kit</h3>
+            <p data-i18n="soundKitDesc">
               Explore sound-activated electronics! Clap, speak, and watch your
               circuits come to life.
             </p>
 
             <div class="kit-details">
-              <h4>What's Inside:</h4>
+              <h4 data-i18n="whatsInside">What's Inside:</h4>
               <ul>
                 <li>🔌 Arduino Uno</li>
                 <li>🎤 Microphone</li>
@@ -91,10 +92,10 @@
             </div>
 
             <div class="kit-actions">
-              <a href="tutorial/tutorial-sound.html" class="btn btn-secondary"
+              <a href="tutorial/tutorial-sound.html" class="btn btn-secondary" data-i18n="viewTutorial"
                 >View Tutorial</a
               >
-              <a href="#order" class="btn btn-primary">Buy Now</a>
+              <a href="#order" class="btn btn-primary" data-i18n="buyNow">Buy Now</a>
             </div>
           </div>
         </article>
@@ -105,15 +106,15 @@
             <img src="images/motion.JPG" alt="Arduino Motion Kit" />
           </div>
           <div class="kit-content">
-            <span class="badge new">New</span>
-            <h3>👀 Motion Detector Kit</h3>
-            <p>
+            <span class="badge new" data-i18n="newBadge">New</span>
+            <h3 data-i18n="motionKitTitle">👀 Motion Detector Kit</h3>
+            <p data-i18n="motionKitDesc">
               Build a smart security system! Detect movement and trigger alarms
               or lights.
             </p>
 
             <div class="kit-details">
-              <h4>What's Inside:</h4>
+              <h4 data-i18n="whatsInside">What's Inside:</h4>
               <ul>
                 <li>🔌 Arduino Uno</li>
                 <li>🟩 Breadboard</li>
@@ -123,10 +124,10 @@
             </div>
 
             <div class="kit-actions">
-              <a href="tutorial/tutorial-motion.html" class="btn btn-secondary"
+              <a href="tutorial/tutorial-motion.html" class="btn btn-secondary" data-i18n="viewTutorial"
                 >View Tutorial</a
               >
-              <a href="#order" class="btn btn-primary">Buy Now</a>
+              <a href="#order" class="btn btn-primary" data-i18n="buyNow">Buy Now</a>
             </div>
           </div>
         </article>
@@ -137,37 +138,37 @@
     <section id="parents" class="section bg-light">
       <div class="container">
         <div class="section-header">
-          <h2>Parents' Corner</h2>
-          <p>Why STEM education matters for your child's future.</p>
+          <h2 data-i18n="parentsTitle">Parents' Corner</h2>
+          <p data-i18n="parentsSubtitle">Why STEM education matters for your child's future.</p>
         </div>
 
         <div class="features-grid">
           <div class="feature-card">
             <div class="icon">🧠</div>
-            <h3>Logical Thinking</h3>
-            <p>
+            <h3 data-i18n="logicalThinking">Logical Thinking</h3>
+            <p data-i18n="logicalThinkingDesc">
               Coding and circuits help develop structured problem-solving
               skills.
             </p>
           </div>
           <div class="feature-card">
             <div class="icon">🤝</div>
-            <h3>Collaboration</h3>
-            <p>
+            <h3 data-i18n="collaboration">Collaboration</h3>
+            <p data-i18n="collaborationDesc">
               Our projects are great for teamwork and parent-child bonding time.
             </p>
           </div>
           <div class="feature-card">
             <div class="icon">🚀</div>
-            <h3>Future Skills</h3>
-            <p>
+            <h3 data-i18n="futureSkills">Future Skills</h3>
+            <p data-i18n="futureSkillsDesc">
               Prepare them for a tech-driven world with hands-on experience.
             </p>
           </div>
           <div class="feature-card">
             <div class="icon">❤️</div>
-            <h3>Made with Love</h3>
-            <p>
+            <h3 data-i18n="madeWithLove">Made with Love</h3>
+            <p data-i18n="madeWithLoveDesc">
               Proudly designed and assembled in Georgia. Safe & Beginner
               friendly.
             </p>
@@ -179,17 +180,17 @@
     <!-- Downloads Section -->
     <section id="downloads" class="section">
       <div class="container text-center">
-        <h2>Downloads for Parents</h2>
-        <p>Get the software and resources you need to help them succeed.</p>
+        <h2 data-i18n="downloadsTitle">Downloads for Parents</h2>
+        <p data-i18n="downloadsSubtitle">Get the software and resources you need to help them succeed.</p>
         <div class="download-links">
           <a
             href="https://www.arduino.cc/en/software"
             target="_blank"
             class="download-btn"
           >
-            <span>⬇️</span> Arduino IDE
+            <span>⬇️</span> <span data-i18n="arduinoIde">Arduino IDE</span>
           </a>
-          <a href="#" class="download-btn"> <span>⬇️</span> Sample Code </a>
+          <a href="#" class="download-btn"> <span>⬇️</span> <span data-i18n="sampleCode">Sample Code</span> </a>
         </div>
       </div>
     </section>
@@ -199,14 +200,14 @@
       <div class="container">
         <div class="order-wrapper">
           <div class="order-form-container">
-            <h2>Order Your Kit</h2>
+            <h2 data-i18n="orderTitle">Order Your Kit</h2>
             <form
               action="https://formspree.io/f/mgvjopge"
               method="POST"
               class="styled-form"
             >
               <div class="form-group">
-                <label for="name">Full Name</label>
+                <label for="name" data-i18n="fullName">Full Name</label>
                 <input
                   type="text"
                   id="name"
@@ -217,7 +218,7 @@
               </div>
 
               <div class="form-group">
-                <label for="email">Email Address</label>
+                <label for="email" data-i18n="emailAddress">Email Address</label>
                 <input
                   type="email"
                   id="email"
@@ -228,7 +229,7 @@
               </div>
 
               <div class="form-group">
-                <label for="phone">Phone Number</label>
+                <label for="phone" data-i18n="phoneNumber">Phone Number</label>
                 <input
                   type="tel"
                   id="phone"
@@ -239,7 +240,7 @@
               </div>
 
               <div class="form-group">
-                <label for="address">Delivery Address</label>
+                <label for="address" data-i18n="deliveryAddress">Delivery Address</label>
                 <input
                   type="text"
                   id="address"
@@ -251,14 +252,14 @@
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="kit">Select Kit</label>
+                  <label for="kit" data-i18n="selectKit">Select Kit</label>
                   <select id="kit" name="kit">
                     <option value="sound">Sound Kit</option>
                     <option value="motion">Motion Detector Kit</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="quantity">Quantity</label>
+                  <label for="quantity" data-i18n="quantity">Quantity</label>
                   <input
                     type="number"
                     id="quantity"
@@ -269,21 +270,21 @@
                 </div>
               </div>
 
-              <button type="submit" class="btn btn-primary full-width">
+              <button type="submit" class="btn btn-primary full-width" data-i18n="placeOrder">
                 Place Order
               </button>
             </form>
           </div>
 
           <div class="payment-info">
-            <h3>Payment Info</h3>
+            <h3 data-i18n="paymentInfo">Payment Info</h3>
             <div class="bank-details">
-              <p><strong>Bank of Georgia</strong></p>
+              <p><strong data-i18n="bankOfGeorgia">Bank of Georgia</strong></p>
               <p class="iban">GE00BG0000000000000000</p>
-              <p>Recipient: STEM Kits for Kids</p>
+              <p data-i18n="recipient">Recipient: STEM Kits for Kids</p>
             </div>
             <div class="cash-option">
-              <p>🚚 Cash on Delivery available!</p>
+              <p data-i18n="cashOnDelivery">🚚 Cash on Delivery available!</p>
             </div>
           </div>
         </div>
@@ -292,7 +293,7 @@
 
     <footer>
       <div class="footer-content">
-        <p>© 2025 STEM Kits for Kids — Made with ❤️ in Georgia</p>
+        <p data-i18n="footerText">© 2025 STEM Kits for Kids — Made with ❤️ in Georgia</p>
         <div class="footer-links">
           <a href="mailto:info@stemkits.ge">info@stemkits.ge</a>
           <a href="tel:+995500000000">+995 500 00 00 00</a>

@@ -31,3 +31,149 @@ window.addEventListener('scroll', () => {
   // Slower, smoother rotation (divide by 10)
   img.style.transform = `rotate(${scrollY / 6}deg)`;
 });
+
+// ===== LANGUAGE SWITCHER =====
+const translations = {
+  en: {
+    logo: 'STEM Kits 🚀',
+    kits: 'Kits',
+    parents: 'Parents',
+    downloads: 'Downloads',
+    order: 'Order Now',
+    heroTitle: 'Spark Creativity with Electronics!',
+    heroSubtitle: 'Fun, safe, and educational Arduino kits for future inventors. No coding required to start!',
+    heroBtn: 'Explore Kits',
+    kitsTitle: 'Our Kits for Kids',
+    kitsSubtitle: 'Everything needed to build, learn, and play.',
+    bestseller: 'Bestseller',
+    soundKitTitle: '🎤 Sound & Light Kit',
+    soundKitDesc: 'Explore sound-activated electronics! Clap, speak, and watch your circuits come to life.',
+    whatsInside: "What's Inside:",
+    viewTutorial: 'View Tutorial',
+    buyNow: 'Buy Now',
+    newBadge: 'New',
+    motionKitTitle: '👀 Motion Detector Kit',
+    motionKitDesc: 'Build a smart security system! Detect movement and trigger alarms or lights.',
+    parentsTitle: "Parents' Corner",
+    parentsSubtitle: "Why STEM education matters for your child's future.",
+    logicalThinking: 'Logical Thinking',
+    logicalThinkingDesc: 'Coding and circuits help develop structured problem-solving skills.',
+    collaboration: 'Collaboration',
+    collaborationDesc: 'Our projects are great for teamwork and parent-child bonding time.',
+    futureSkills: 'Future Skills',
+    futureSkillsDesc: 'Prepare them for a tech-driven world with hands-on experience.',
+    madeWithLove: 'Made with Love',
+    madeWithLoveDesc: 'Proudly designed and assembled in Georgia. Safe & Beginner friendly.',
+    downloadsTitle: 'Downloads for Parents',
+    downloadsSubtitle: 'Get the software and resources you need to help them succeed.',
+    arduinoIde: 'Arduino IDE',
+    sampleCode: 'Sample Code',
+    orderTitle: 'Order Your Kit',
+    fullName: 'Full Name',
+    emailAddress: 'Email Address',
+    phoneNumber: 'Phone Number',
+    deliveryAddress: 'Delivery Address',
+    selectKit: 'Select Kit',
+    quantity: 'Quantity',
+    placeOrder: 'Place Order',
+    paymentInfo: 'Payment Info',
+    bankOfGeorgia: 'Bank of Georgia',
+    recipient: 'Recipient: STEM Kits for Kids',
+    cashOnDelivery: '🚚 Cash on Delivery available!',
+    footerText: '© 2025 STEM Kits for Kids — Made with ❤️ in Georgia',
+  },
+  ka: {
+    logo: 'STEM ნაკრებები 🚀',
+    kits: 'ნაკრებები',
+    parents: 'მშობლების კუთხე',
+    downloads: 'ჩამოტვირთვები',
+    order: 'შეკვეთა',
+    heroTitle: 'გამოაღვიძეთ თქვენი კრეატიულობა ელექტრონიკით!',
+    heroSubtitle: 'სახალისო, უსაფრთხო და საგანმანათლებლო ხასიათის Arduino ნაკრებები მომავალი გამომგონებლებისთვის. პროექტების დასაწყებად პროგრამირება არ არის საჭირო!',
+    heroBtn: 'ნაკრებების ნახვა',
+    kitsTitle: 'ნაკრებები ბავშვებისთვის',
+    kitsSubtitle: 'ყველაფერი რაც საჭიროა ნაკრების ასაწყობად, სასწავლად და სათამაშოდ.',
+    bestseller: 'ბესტსელერი',
+    soundKitTitle: '🎤 ხმის და სინათლის სენსორების ნაკრები',
+    soundKitDesc: 'გამოიკვლიე ხმით გააქტიურებადი ელექტრონიკა! დაუკარი ტაში, ილაპარაკე და ნახე როგორ ცოცხლდებიან შენი სქემები.',
+    whatsInside: 'რა არის შიგნით:',
+    viewTutorial: 'გაკვეთილის ნახვა',
+    buyNow: 'ყიდვა',
+    newBadge: 'ახალი',
+    motionKitTitle: '👀 მოძრაობის დეტექტორის ნაკრები',
+    motionKitDesc: 'ააშენე ჭკვიანი უსაფრთხოების სისტემა! აღმოაჩინე მოძრაობა და ჩართე განგაში ან განათება.',
+    parentsTitle: 'მშობლების კუთხე',
+    parentsSubtitle: 'რატომ არის მნიშვნელოვანი STEM განათლება თქვენი ბავშვის მომავლისთვის.',
+    logicalThinking: 'ლოგიკური აზროვნება',
+    logicalThinkingDesc: 'პროგრამირება და სქემები ხელს უწყობს სტრუქტურირებული პრობლემების გადაჭრის უნარების განვითარებას.',
+    collaboration: 'თანამშრომლობა',
+    collaborationDesc: 'ჩვენი პროექტები შესანიშნავია გუნდური მუშაობისა და მშობელ-შვილის ერთად დროის გასატარებლად.',
+    futureSkills: 'მომავლის უნარები',
+    futureSkillsDesc: 'მოამზადეთ ისინი ტექნოლოგიური სამყაროსთვის პრაქტიკული გამოცდილებით.',
+    madeWithLove: 'სიყვარულით შექმნილი',
+    madeWithLoveDesc: 'სიამაყით შექმნილი და აწყობილი საქართველოში. უსაფრთხო და დამწყებთათვის მეგობრული.',
+    downloadsTitle: 'ჩამოტვირთვები მშობლებისთვის',
+    downloadsSubtitle: 'ჩამოტვირთეთ პროგრამები და რესურსები, რომლებიც დაგეხმარებათ წარმატების მიღწევაში.',
+    arduinoIde: 'Arduino IDE',
+    sampleCode: 'მაგალითი კოდი',
+    orderTitle: 'შეუკვეთე ნაკრები',
+    fullName: 'სრული სახელი',
+    emailAddress: 'ელ. ფოსტა',
+    phoneNumber: 'ტელეფონის ნომერი',
+    deliveryAddress: 'მისამართი',
+    selectKit: 'აირჩიე ნაკრები',
+    quantity: 'რაოდენობა',
+    placeOrder: 'შეკვეთის გაფორმება',
+    paymentInfo: 'გადახდის ინფორმაცია',
+    bankOfGeorgia: 'საქართველოს ბანკი',
+    recipient: 'მიმღები: STEM ნაკრებები ბავშვებისთვის',
+    cashOnDelivery: '🚚 გადახდა მიღებისას!',
+    footerText: '© 2025 STEM ნაკრებები ბავშვებისთვის — შექმნილია ❤️-ით საქართველოში',
+  },
+};
+
+function applyLanguage(lang) {
+  const t = translations[lang];
+  if (!t) return;
+
+  // Translate all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      el.textContent = t[key];
+    }
+  });
+
+  // Update toggle button state
+  const toggle = document.getElementById('langToggle');
+  if (toggle) {
+    toggle.setAttribute('data-lang', lang);
+    if (lang === 'en') {
+      toggle.innerHTML = '<span class="active-lang">EN</span> | ქა';
+    } else {
+      toggle.innerHTML = 'EN | <span class="active-lang">ქა</span>';
+    }
+  }
+
+  // Save preference
+  localStorage.setItem('preferred-lang', lang);
+}
+
+function toggleLanguage() {
+  const toggle = document.getElementById('langToggle');
+  if (!toggle) return;
+  const currentLang = toggle.getAttribute('data-lang') || 'en';
+  const newLang = currentLang === 'en' ? 'ka' : 'en';
+  applyLanguage(newLang);
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function () {
+  const savedLang = localStorage.getItem('preferred-lang') || 'en';
+  applyLanguage(savedLang);
+
+  const toggle = document.getElementById('langToggle');
+  if (toggle) {
+    toggle.addEventListener('click', toggleLanguage);
+  }
+});

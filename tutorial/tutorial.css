@@ -71,6 +71,34 @@ nav a:hover {
   color: var(--secondary);
 }
 
+/* ===== LANGUAGE SWITCHER (Tutorial Nav) ===== */
+.lang-switcher {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 15px;
+  vertical-align: middle;
+  display: inline;
+}
+
+.lang-switcher:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.lang-switcher .active-lang {
+  text-decoration: underline;
+}
+
 /* ===== TUTORIAL CONTENT ===== */
 #tutorials {
   padding: 40px 20px;
