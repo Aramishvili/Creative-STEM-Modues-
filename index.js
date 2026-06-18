@@ -80,7 +80,7 @@ const translations = {
     bankOfGeorgia: 'Bank of Georgia',
     recipient: 'Recipient: STEM Kits for Kids',
     cashOnDelivery: '🚚 Cash on Delivery available!',
-    footerText: '© 2025 STEM Kits for Kids — Made with ❤️ in Georgia',
+    footerText: '© {year} STEM Kits for Kids — Made with ❤️ in Georgia',
   },
   ka: {
     logo: 'STEM ნაკრებები 🚀',
@@ -95,27 +95,27 @@ const translations = {
     kitsSubtitle: 'ყველაფერი რაც საჭიროა ნაკრების ასაწყობად, სასწავლად და სათამაშოდ.',
     bestseller: 'ბესტსელერი',
     soundKitTitle: '🎤 ხმის და სინათლის სენსორების ნაკრები',
-    soundKitDesc: 'გამოიკვლიე ხმით გააქტიურებადი ელექტრონიკა! დაუკარი ტაში, ილაპარაკე და ნახე როგორ ცოცხლდებიან შენი სქემები.',
+    soundKitDesc: 'აღმოაჩინე ხმით გააქტიურებადი ელექტრონიკა! დაუკარი ტაში, ილაპარაკე და ნახე როგორ ცოცხლდებიან შენი სქემები.',
     whatsInside: 'რა არის შიგნით:',
-    viewTutorial: 'გაკვეთილის ნახვა',
+    viewTutorial: 'ტუტორიალის ნახვა',
     buyNow: 'ყიდვა',
     newBadge: 'ახალი',
     motionKitTitle: '👀 მოძრაობის დეტექტორის ნაკრები',
-    motionKitDesc: 'ააშენე ჭკვიანი უსაფრთხოების სისტემა! აღმოაჩინე მოძრაობა და ჩართე განგაში ან განათება.',
+    motionKitDesc: 'ააწყე ჭკვიანი უსაფრთხოების სისტემა! აღმოაჩინე მოძრაობა და ჩართე განგაში ან განათება.',
     parentsTitle: 'მშობლების კუთხე',
     parentsSubtitle: 'რატომ არის მნიშვნელოვანი STEM განათლება თქვენი ბავშვის მომავლისთვის.',
     logicalThinking: 'ლოგიკური აზროვნება',
-    logicalThinkingDesc: 'პროგრამირება და სქემები ხელს უწყობს სტრუქტურირებული პრობლემების გადაჭრის უნარების განვითარებას.',
+    logicalThinkingDesc: 'პროგრამირება და ელექტრონულ სქემებთან მუშაობა ხელს უწყობს მრავალწახნაგოვანი პრობლემების გადაჭრის უნარების განვითარებას.',
     collaboration: 'თანამშრომლობა',
-    collaborationDesc: 'ჩვენი პროექტები შესანიშნავია გუნდური მუშაობისა და მშობელ-შვილის ერთად დროის გასატარებლად.',
-    futureSkills: 'მომავლის უნარები',
-    futureSkillsDesc: 'მოამზადეთ ისინი ტექნოლოგიური სამყაროსთვის პრაქტიკული გამოცდილებით.',
+    collaborationDesc: 'ჩვენი პროექტები შესანიშნავია გუნდური მუშაობისთვის და მშობლებს აძლევს შესაძლებლობას შვილებთან ერთად დროის გასატარებლად.',
+    futureSkills: 'მომავალზე ორიენტირებული უნარები',
+    futureSkillsDesc: 'აღჭურვეთ ბავშვები ტექნოლოგიური სამყაროსთვის საჭირო პრაქტიკული გამოცდილებით.',
     madeWithLove: 'სიყვარულით შექმნილი',
-    madeWithLoveDesc: 'სიამაყით შექმნილი და აწყობილი საქართველოში. უსაფრთხო და დამწყებთათვის მეგობრული.',
-    downloadsTitle: 'ჩამოტვირთვები მშობლებისთვის',
+    madeWithLoveDesc: 'ვამაყობთ, რომ შექმნილი და აწყობილია საქართველოში. მოწყობილობები უსაფრთხოა და დამწყებთათვის ადვილად გამოსაყენებელი.',
+    downloadsTitle: 'მშობლებო ჩამოტვირთეთ საჭირო რესურსები',
     downloadsSubtitle: 'ჩამოტვირთეთ პროგრამები და რესურსები, რომლებიც დაგეხმარებათ წარმატების მიღწევაში.',
     arduinoIde: 'Arduino IDE',
-    sampleCode: 'მაგალითი კოდი',
+    sampleCode: 'კოდის ნიმუში',
     orderTitle: 'შეუკვეთე ნაკრები',
     fullName: 'სრული სახელი',
     emailAddress: 'ელ. ფოსტა',
@@ -123,12 +123,12 @@ const translations = {
     deliveryAddress: 'მისამართი',
     selectKit: 'აირჩიე ნაკრები',
     quantity: 'რაოდენობა',
-    placeOrder: 'შეკვეთის გაფორმება',
-    paymentInfo: 'გადახდის ინფორმაცია',
+    placeOrder: 'შეკვეთის დადასტურება',
+    paymentInfo: 'გადახდისთვის საჭირო ინფორმაცია',
     bankOfGeorgia: 'საქართველოს ბანკი',
     recipient: 'მიმღები: STEM ნაკრებები ბავშვებისთვის',
-    cashOnDelivery: '🚚 გადახდა მიღებისას!',
-    footerText: '© 2025 STEM ნაკრებები ბავშვებისთვის — შექმნილია ❤️-ით საქართველოში',
+    cashOnDelivery: '🚚 გადახდა განხორციელდება მიწოდების დროს!',
+    footerText: '© {year} STEM ნაკრებები ბავშვებისთვის — შექმნილია ❤️-ით საქართველოში',
   },
 };
 
@@ -136,11 +136,16 @@ function applyLanguage(lang) {
   const t = translations[lang];
   if (!t) return;
 
+  const currentYear = new Date().getFullYear();
+
   // Translate all elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) {
-      el.textContent = t[key];
+      let text = t[key];
+      // Replace {year} placeholder with the actual current year
+      text = text.replace(/\{year\}/g, currentYear);
+      el.textContent = text;
     }
   });
 
