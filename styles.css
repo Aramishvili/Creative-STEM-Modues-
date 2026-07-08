@@ -671,7 +671,7 @@ footer {
 
   .lang-toggle {
     position: absolute;
-    /* top: 50%; */
+    top: 20%;
     right: 1.25rem;
     transform: translateY(-50%);
     font-size: 0.65rem;
