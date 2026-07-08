@@ -185,27 +185,15 @@ function applyLanguage(lang) {
     }
   });
 
-  // Update toggle button state
+  // Update toggle button text
   const toggle = document.getElementById('langToggle');
   if (toggle) {
     toggle.setAttribute('data-lang', lang);
-    if (lang === 'en') {
-      toggle.innerHTML = '<span class="active-lang">EN</span> | ქა';
-    } else {
-      toggle.innerHTML = 'EN | <span class="active-lang">ქა</span>';
-    }
+    toggle.textContent = lang === 'en' ? 'ქა' : 'EN';
   }
 
   // Save preference
   localStorage.setItem('preferred-lang', lang);
-}
-
-function toggleLanguage() {
-  const toggle = document.getElementById('langToggle');
-  if (!toggle) return;
-  const currentLang = toggle.getAttribute('data-lang') || 'en';
-  const newLang = currentLang === 'en' ? 'ka' : 'en';
-  applyLanguage(newLang);
 }
 
 // Initialize on page load
@@ -215,6 +203,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const toggle = document.getElementById('langToggle');
   if (toggle) {
-    toggle.addEventListener('click', toggleLanguage);
+    toggle.addEventListener('click', function () {
+      const currentLang = toggle.getAttribute('data-lang') || 'en';
+      const newLang = currentLang === 'en' ? 'ka' : 'en';
+      applyLanguage(newLang);
+    });
   }
 });
