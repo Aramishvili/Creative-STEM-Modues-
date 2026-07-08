@@ -80,9 +80,13 @@ const translations = {
     sampleCode: 'Sample Code',
     orderTitle: 'Order Your Kit',
     fullName: 'Full Name',
+    fullNamePlaceholder: 'John Doe',
     emailAddress: 'Email Address',
+    emailAddressPlaceholder: 'john@example.com',
     phoneNumber: 'Phone Number',
+    phoneNumberPlaceholder: '+995 500 ...',
     deliveryAddress: 'Delivery Address',
+    deliveryAddressPlaceholder: 'City, Street, Apt...',
     selectKit: 'Select Kit',
     quantity: 'Quantity',
     placeOrder: 'Place Order',
@@ -138,9 +142,13 @@ const translations = {
     sampleCode: 'კოდის ნიმუში',
     orderTitle: 'შეუკვეთე ნაკრები',
     fullName: 'სრული სახელი',
+    fullNamePlaceholder: 'სახელი გვარი',
     emailAddress: 'ელ. ფოსტა',
+    emailAddressPlaceholder: 'john@example.com',
     phoneNumber: 'ტელეფონის ნომერი',
+    phoneNumberPlaceholder: '+995 555 ...',
     deliveryAddress: 'მისამართი',
+    deliveryAddressPlaceholder: 'ქალაქი, ქუჩა, ბინა...',
     selectKit: 'აირჩიე ნაკრები',
     quantity: 'რაოდენობა',
     placeOrder: 'შეკვეთის დადასტურება',
@@ -158,7 +166,7 @@ function applyLanguage(lang) {
 
   const currentYear = new Date().getFullYear();
 
-  // Translate all elements with data-i18n attribute
+  // Translate all elements with data-i18n attribute (textContent)
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) {
@@ -166,6 +174,14 @@ function applyLanguage(lang) {
       // Replace {year} placeholder with the actual current year
       text = text.replace(/\{year\}/g, currentYear);
       el.textContent = text;
+    }
+  });
+
+  // Translate placeholder attributes using data-i18n-placeholder key
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (t[key] !== undefined) {
+      el.placeholder = t[key];
     }
   });
 
