@@ -2,9 +2,33 @@
 document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
+  // ----- Mobile menu toggle (hamburger) -----
+  const hamburgerBtn = document.getElementById('menuToggle');
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function () {
+      const navLinksEl = document.querySelector('.nav-links');
+      const isOpen = navLinksEl.classList.toggle('active');
+      this.textContent = isOpen ? '✕' : '☰';
+
+      // Prevent body scroll when menu is open
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
   navLinks.forEach((link) => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
+    link.addEventListener('click', function () {
+      const isOpen = hamburgerBtn ? hamburgerBtn.classList.contains('active') : false;
+      if (isOpen) {
+        // Close mobile menu after navigation
+        const navLinksEl = document.querySelector('.nav-links');
+        navLinksEl.classList.remove('active');
+        hamburgerBtn.textContent = '☰';
+        document.body.style.overflow = '';
+      }
 
       const targetId = this.getAttribute('href');
       const targetElement = document.querySelector(targetId);
@@ -28,8 +52,8 @@ window.addEventListener('scroll', () => {
   if (!img) return; // Guard clause
 
   const scrollY = window.scrollY;
-  // Slower, smoother rotation (divide by 10)
-  img.style.transform = `rotate(${scrollY / 6}deg)`;
+  // Smoother parallax rotation — gentle sway (was /6, now /30 for subtler effect)
+  img.style.transform = `rotate(${scrollY / 30}deg)`;
 });
 
 // ===== LANGUAGE SWITCHER =====

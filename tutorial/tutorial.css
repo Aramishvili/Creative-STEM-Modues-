@@ -77,33 +77,30 @@ nav a:hover {
   color: var(--secondary);
 }
 
-/* ===== LANGUAGE SWITCHER (Tutorial Nav) ===== */
-.lang-switcher {
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 700;
-  cursor: pointer;
-  padding: 4px 12px;
+/* ===== LANGUAGE TOGGLE (Tutorial Nav) ===== */
+.lang-toggle {
+  display: inline-block;
+  background: var(--white);
+  border: 2px solid var(--secondary);
   border-radius: 20px;
-  border: 2px solid var(--primary);
-  background: transparent;
-  color: var(--primary);
-  transition: all 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 14px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-left: 0;
-  vertical-align: middle;
-  display: inline-flex;
-  align-items: center;
+  color: var(--secondary);
+  -webkit-user-select: none;
+  user-select: none;
+  transition: all 0.3s ease;
 }
 
-.lang-switcher:hover {
-  background: var(--primary);
+.lang-toggle:hover {
+  background: var(--secondary);
   color: var(--white);
-}
-
-.lang-switcher .active-lang {
-  text-decoration: underline;
+  box-shadow: 0 0 0 3px rgba(58, 141, 222, 0.15);
 }
 
 /* ===== TUTORIAL CONTENT ===== */
@@ -223,7 +220,7 @@ button:hover {
 }
 
 /* Responsive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
   header {
     padding: 30px 16px;
   }
@@ -238,7 +235,7 @@ button:hover {
   }
 
   nav a,
-  .lang-switcher {
+  .lang-toggle {
     font-size: 0.85rem;
   }
 

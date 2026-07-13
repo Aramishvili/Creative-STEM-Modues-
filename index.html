@@ -12,12 +12,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Arduino Fun Kits for Kids — Build, learn, and play with electronics. Safe STEM kits designed in Georgia." />
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar">
-      <div class="nav-container">
+      <!-- Desktop nav: 3-column layout (logo — links — lang) -->
+      <div class="nav-row">
         <a href="#" class="logo" data-i18n="logo">STEM Kits 🚀</a>
+        <button class="hamburger" aria-label="Toggle menu" id="menuToggle">☰</button>
         <ul class="nav-links">
           <li><a href="#kits" data-i18n="kits">Kits</a></li>
           <li><a href="#parents" data-i18n="parents">Parents</a></li>
@@ -69,7 +73,7 @@
         <article class="kit-card" id="sound-light-kit">
           <div class="kit-image-wrapper">
             <img
-              src="images/soundkit.png.JPG"
+              src="images/soundkit_1.JPG"
               alt="Arduino Sound & Light Kit"
             />
           </div>

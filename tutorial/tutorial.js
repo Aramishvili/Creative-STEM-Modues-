@@ -119,11 +119,7 @@ function applyLanguage(lang) {
   const toggle = document.getElementById('langToggle');
   if (toggle) {
     toggle.setAttribute('data-lang', lang);
-    if (lang === 'en') {
-      toggle.innerHTML = '<span class="active-lang">EN</span> | ქა';
-    } else {
-      toggle.innerHTML = 'EN | <span class="active-lang">ქა</span>';
-    }
+    toggle.textContent = lang === 'en' ? 'ქა' : 'EN';
   }
 
   // Save preference
