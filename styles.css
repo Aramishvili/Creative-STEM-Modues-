@@ -3,8 +3,7 @@
   /* Colors */
 --primary: #1a2a6c; /* Deep Space Blue */
 --primary-light: #2a4085;
---pastel-accent: #b39ddb; /* Soft Lilac/Lavender for secondary accents */
---accent: #f39c12; /* Vibrant Orange */
+--accent: #f39c12;
 --accent-hover: #e67e22;
 --secondary: #3a8dde; /* Electric Blue */
   --bg-color: #f4f7f6;
@@ -188,6 +187,14 @@ section {
 }
 
 /* ---- Desktop nav links (row) ---- */
+/* ---- Nav container (used on iPad + mobile) ---- */
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  height: clamp(64px, 7vw, 72px);
+  display: flex;
+}
+
 .nav-links {
   display: flex !important;
   align-items: center;
@@ -765,17 +772,10 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 900px) and (min-width: 671px) {
-  /* Navbar adjustments for iPad — fixes misalignment of logo and lang toggle */
+@media (max-width: 900px) {
+  /* Navbar — iPad & tablet (merged from ipad + desktop rules) */
   .navbar {
     padding: 0.75rem 0;
-  }
-
-  .nav-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 0.5rem;
   }
 
   .logo {
@@ -790,23 +790,21 @@ footer {
   }
 
   .lang-toggle {
-    margin-right: 10;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: 0;
     flex-shrink: 0;
   }
 
-  /* Hero layout for iPad */
+  /* Hero — merged iPad + mobile */
   .hero {
-    flex-direction: column;
+    min-height: 500px;
+    padding: 7.5rem 1rem 3rem;
     text-align: center;
-    min-height: 0;
-    padding: 7rem 1rem 3.5rem;
   }
 
   .hero-content {
+    max-width: 600px;
     margin-top: 2rem;
-    max-width: 720px;
-    padding: 1rem;
   }
 
   .hero h1 {
@@ -817,7 +815,7 @@ footer {
     margin-bottom: 2rem;
   }
 
-  /* Kit cards stack vertically on iPad */
+  /* Kit cards stack vertically on tablet/mobile */
   .kit-card,
   .kit-card.inverse {
     flex-direction: column;
@@ -830,11 +828,11 @@ footer {
     padding: 2rem;
   }
 
+  /* Floating parts reposition */
   #arduino-container {
     max-width: 360px;
   }
 
-  /* Floating parts reposition for narrower container */
   #micro {
     width: 90px;
     top: -24px;
@@ -851,7 +849,23 @@ footer {
     flex-direction: column;
     gap: 0;
   }
+
+  /* iPad-specific: grid nav layout */
+  @media (min-width: 671px) and (min-width: 900px + 1px) {
+    .nav-container {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    #ultra {
+      width: 110px;
+    }
+  }
+
 }
+
 
 @media (max-width: 670px) {
   .container,
